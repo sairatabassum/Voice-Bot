@@ -15,17 +15,14 @@ win.config(bg="#ececec")
 def chat_enter():
     global cl
     global var
-    color = ""
-    mode = ""
+    color = "";bg_clr1="";mode = "";fg_clr1="";bg_clr2="";fg_clr2=""
     select_value = var.get()
 
-
     if select_value == 1:
-        color = "#262626"
-        mode = "#262626"
+        color = "#262626";mode = "#808080";bg_clr1="#262626";fg_clr1="#C0C0C0";bg_clr2="#696969";fg_clr2="white"
     if select_value == 2:
-        color = "#ececec"
-        mode = "#ececec"
+        color = "#ececec";mode = "#C0C0C0";bg_clr1="#2E8B57";fg_clr1="#F8F8FF";bg_clr2="#625f3e";fg_clr2="white"
+
     cnt=0
     try:
        for i in cl:
@@ -39,15 +36,34 @@ def chat_enter():
     frm1.place(x=0,y=0,height=590,width=400)
 
     frm2=Frame(frm1,bg=mode)
-    frm2.place(x=0,y=510,height=80,width=400)
+    frm2.place(x=0,y=500,height=90,width=400)
 
     if select_value==1:
+        im=Image.open("setting.png")
+        n=im.resize((68,68))
+        img=ImageTk.PhotoImage(n)
+        bu=Button(frm2,command=dark,relief=FLAT,image=img)
+        bu.image=img
+        bu.place(x=330,y=22,height=40,width=50)
 
-        bu=Button(frm2,command=dark)
-        bu.place(x=0,y=0)
     elif select_value==2:
-        bu = Button(frm2,command=light)
-        bu.place(x=0,y=0)
+        im=Image.open("green-settings.png")
+        n=im.resize((50,50))
+        img=ImageTk.PhotoImage(n)
+        bu = Button(frm2,relief=FLAT,command=light,image=img)
+        bu.image=img
+        bu.place(x=330,y=22,height=40,width=50)
+
+
+    txt=StringVar()
+    en1=Entry(frm2,textvariable=txt,font=('Arial',15,'bold'),bg=bg_clr1,fg=fg_clr1)
+    en1.place(x=55,y=22,height=40,width=200)
+    en1.insert(0,"Text Something...")
+
+    b3=Button(frm2,text="Send",font=('calibri',11),bg=bg_clr2,fg=fg_clr2)
+    b3.place(x=265,y=22,height=40,width=50)
+
+
 
 # --Color Palette--
 def color():
@@ -94,6 +110,8 @@ def light():
     # --Enter to the chat--
     but2 = Button(fr1,text="Enter",width=10,font=('calibri',11,''),bg="#2E8B57",fg="white",command=chat_enter)
     but2.place(x=160,y=540)
+
+
 
 # --Change into Dark Mode--
 def dark():
