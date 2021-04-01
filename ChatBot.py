@@ -3,7 +3,7 @@ from tkinter import colorchooser
 from PIL import ImageTk,Image
 
 
-
+#--Main Windows--
 win=Tk()
 win.geometry('400x590+400+15')
 win.title("Pikachu ChatBot")
@@ -16,6 +16,7 @@ image = PhotoImage(file="chatbot-1.png")
 p=Label(win, image=image)
 p.place(x=-215,y=0)
 
+#--Color Palette--
 def color():
     cl=colorchooser.askcolor()
 
@@ -49,6 +50,7 @@ def light():
     p.config(image=photo2)
     p.photo_ref = photo2
 
+#--Enter Chat-Bot--
 def chat_enter():
     print(var.get())
 
@@ -70,7 +72,6 @@ r1=Radiobutton(win,text="Dark",variable=var,value=1,command=dark,bg="#ececec")
 r1.place(x=190,y=450)
 r2=Radiobutton(win,text="Light",variable=var,value=2,command=light,bg="#ececec")
 r2.place(x=290,y=450)
-
 
 
 la4=Label(win,text="Chat Background",font=('calibri',11,''),bg="#ececec")
