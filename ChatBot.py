@@ -66,14 +66,16 @@ def chat_enter():
     color=""
     mode=""
     select_value=var.get()
-    if select_value==1:
-        color="#262626"
-        mode="#262626"
-    if select_value==2:
-        color="#ececec"
-        mode="#262626"
-    if s!="":
-      color=s
+    if select_value == 1:
+        color = "#262626"
+        mode = "#262626"
+    if select_value == 2:
+        color = "#ececec"
+        mode = "#ececec"
+    if s != "":
+        color = s
+    else:
+        color = mode
 
 
 
