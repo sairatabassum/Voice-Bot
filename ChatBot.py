@@ -16,9 +16,20 @@ image = PhotoImage(file="chatbot-1.png")
 p=Label(win, image=image)
 p.place(x=-215,y=0)
 
+def value():
+    global s
+    s = ""
+
 #--Color Palette--
 def color():
+    global s
+    s=""
     cl=colorchooser.askcolor()
+    cnt=0
+    for i in cl:
+        cnt=cnt+1
+        if cnt==2:
+            s=i
 
 #--Change into Dark Mode--
 def dark():
@@ -52,9 +63,21 @@ def light():
 
 #--Enter Chat-Bot--
 def chat_enter():
-    print(var.get())
+    color=""
+    mode=""
+    select_value=var.get()
+    if select_value==1:
+        color="#262626"
+        mode="#262626"
+    if select_value==2:
+        color="#ececec"
+        mode="#262626"
+    if s!="":
+      color=s
 
 
+
+value()
 #--Welcome to pikachu chatbot--
 la1=Label(win,text="Welcome to Pikachu",font=('veranda',25,''),bg="#ececec")
 la1.place(x=50,y=310)
@@ -82,7 +105,6 @@ but1.place(x=190,y=490)
 #--Enter to the chat--
 but2=Button(win,text="Enter",width=10,font=('calibri',11,''),bg="#2E8B57",fg="white",command=chat_enter)
 but2.place(x=160,y=540)
-
 
 
 
