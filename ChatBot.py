@@ -1,6 +1,6 @@
 from tkinter import*
 from tkinter import colorchooser
-
+from PIL import ImageTk,Image
 
 
 
@@ -13,7 +13,8 @@ win.config(bg="#ececec")
 
 #--Image Add--
 image = PhotoImage(file="chatbot-1.png")
-Label(win, image=image).place(x=-215,y=0)
+p=Label(win, image=image)
+p.place(x=-215,y=0)
 
 def color():
     cl=colorchooser.askcolor()
@@ -27,6 +28,12 @@ def dark():
     r1.config(bg="#262626",fg="#F5F5F5")
     r2.config(bg="#262626",fg="#F5F5F5")
 
+
+    photo2 = ImageTk.PhotoImage(Image.open("chatbot-2.png"))
+    p.config(image=photo2)
+    p.photo_ref = photo2
+
+
 def light():
     win.config(bg="#ececec")
     la1.config(bg="#ececec",fg="black")
@@ -37,11 +44,15 @@ def light():
     r2.config(bg="#ececec",fg="black")
 
 
+    photo2 = ImageTk.PhotoImage(Image.open("chatbot-1.png"))
+    p.config(image=photo2)
+    p.photo_ref = photo2
+
 
 
 #--Welcome to pikachu chatbot--
 la1=Label(win,text="Welcome to Pikachu",font=('veranda',25,''),bg="#ececec")
-la1.place(x=50,y=320)
+la1.place(x=50,y=310)
 
 la2=Label(win,text="ChatBot",font=('veranda',25,''),bg="#ececec")
 la2.place(x=140,y=360)
