@@ -29,7 +29,7 @@ def dark():
     r2.config(bg="#262626",fg="#F5F5F5")
 
 
-    photo2 = ImageTk.PhotoImage(Image.open("chatbot-2.png"))
+    photo2 = ImageTk.PhotoImage(Image.open("chatbot-2.jpg"))
     p.config(image=photo2)
     p.photo_ref = photo2
 
