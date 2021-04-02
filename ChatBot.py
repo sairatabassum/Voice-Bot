@@ -40,28 +40,42 @@ def chat_enter():
 
     if select_value==1:
         im=Image.open("setting.png")
-        n=im.resize((68,68))
+        n=im.resize((48,48))
         img=ImageTk.PhotoImage(n)
         bu=Button(frm2,command=dark,relief=FLAT,image=img)
         bu.image=img
-        bu.place(x=330,y=22,height=40,width=50)
+        bu.place(x=360,y=28,height=30,width=30)
+
+        im2 = Image.open("gramophone-record.png")
+        n2 = im2.resize((60,60))
+        img2 = ImageTk.PhotoImage(n2)
+        bu2 = Button(frm2,relief=FLAT,image=img2)
+        bu2.image = img2
+        bu2.place(x=15,y=25,height=30,width=30)
 
     elif select_value==2:
         im=Image.open("green-settings.png")
-        n=im.resize((50,50))
+        n=im.resize((40,40))
         img=ImageTk.PhotoImage(n)
         bu = Button(frm2,relief=FLAT,command=light,image=img)
         bu.image=img
-        bu.place(x=330,y=22,height=40,width=50)
+        bu.place(x=360,y=28,height=30,width=30)
+
+        im2 = Image.open("record.png")
+        n2 = im2.resize((55,55))
+        img2 = ImageTk.PhotoImage(n2)
+        bu2 = Button(frm2,relief=FLAT,image=img2)
+        bu2.image = img2
+        bu2.place(x=25,y=25,height=34,width=20)
 
 
     txt=StringVar()
     en1=Entry(frm2,textvariable=txt,font=('Arial',15,'bold'),bg=bg_clr1,fg=fg_clr1)
-    en1.place(x=55,y=22,height=40,width=200)
+    en1.place(x=60,y=22,height=40,width=220)
     en1.insert(0,"Text Something...")
 
     b3=Button(frm2,text="Send",font=('calibri',11),bg=bg_clr2,fg=fg_clr2)
-    b3.place(x=265,y=22,height=40,width=50)
+    b3.place(x=290,y=22,height=40,width=50)
 
 
 
@@ -110,7 +124,6 @@ def light():
     # --Enter to the chat--
     but2 = Button(fr1,text="Enter",width=10,font=('calibri',11,''),bg="#2E8B57",fg="white",command=chat_enter)
     but2.place(x=160,y=540)
-
 
 
 # --Change into Dark Mode--
