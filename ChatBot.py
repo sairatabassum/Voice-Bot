@@ -1,7 +1,7 @@
 from tkinter import*
 from tkinter import colorchooser
 from PIL import ImageTk,Image
-import speech_recognition as sr
+import speech_recognition as sp
 from time import ctime
 import webbrowser
 import playsound
@@ -21,6 +21,19 @@ win.config(bg="#ececec")
 
 #--Enter Chat-Bot--
 def chat_enter():
+    def pikachu_speak(audio_string):
+        adio=gTTS(text=audio_string,lang='en')
+        ran=random.randint(1,10000000)
+        audio_file='audio-'+str(ran)+'.mp3'
+        adio.save(audio_file)
+        playsound.playsound(audio_file)
+        os.remove(audio_file)
+
+
+    def respond(voice_and_text_data):
+        print(voice_and_text_data)
+
+
     global cl
     global var
     color = "";bg_clr1="";mode = "";fg_clr1="";bg_clr2="";fg_clr2=""
@@ -86,7 +99,7 @@ def chat_enter():
     en1.place(x=60,y=22,height=40,width=220)
     en1.insert(0,"Text Something...")
 
-    b3=Button(frm2,text="Send",font=('calibri',11),bg=bg_clr2,fg=fg_clr2)
+    b3=Button(frm2,text="Send",font=('calibri',11),bg=bg_clr2,fg=fg_clr2,command=lambda: respond(en1.get()))
     b3.place(x=290,y=22,height=40,width=50)
 
 
