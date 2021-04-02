@@ -1,6 +1,14 @@
 from tkinter import*
 from tkinter import colorchooser
 from PIL import ImageTk,Image
+import speech_recognition as sr
+from time import ctime
+import webbrowser
+import playsound
+import os
+import random
+from gtts import gTTS
+import time
 
 
 #--Main Windows--
