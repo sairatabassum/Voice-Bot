@@ -20,6 +20,7 @@ win.iconbitmap(r'chabot.ico')
 win.config(bg="#ececec")
 
 #--Enter Chat-Bot--
+
 def chat_enter():
     def pikachu_speak(audio_string):
         adio=gTTS(text=audio_string,lang='en')
@@ -30,19 +31,21 @@ def chat_enter():
         os.remove(audio_file)
 
 
-    def respond(voice_and_text_data):
-        print(voice_and_text_data)
+    def respond(voice_or_text_data):
+
+        if 'what is your name' in voice_or_text_data:
+            pikachu_speak("My name is pikachu")
 
 
     global cl
     global var
-    color = "";bg_clr1="";mode = "";fg_clr1="";bg_clr2="";fg_clr2=""
+    color = "";bg_clr1="";mode = "";fg_clr1="";bg_clr2="";fg_clr2="";ac1=""
     select_value = var.get()
 
     if select_value == 1:
-        color = "#262626";mode = "#808080";bg_clr1="#262626";fg_clr1="#C0C0C0";bg_clr2="#696969";fg_clr2="white"
+        color = "#262626";mode = "#808080";bg_clr1="#262626";fg_clr1="#C0C0C0";bg_clr2="#696969";fg_clr2="white";ac1="#d1d0c6"
     if select_value == 2:
-        color = "#ececec";mode = "#C0C0C0";bg_clr1="#2E8B57";fg_clr1="#F8F8FF";bg_clr2="#625f3e";fg_clr2="white"
+        color = "#ececec";mode = "#C0C0C0";bg_clr1="#2E8B57";fg_clr1="#F8F8FF";bg_clr2="#625f3e";fg_clr2="white";ac1="#A3A18E"
 
     cnt = 0
     clp = ""
@@ -74,7 +77,7 @@ def chat_enter():
         im2 = Image.open("gramophone-record.png")
         n2 = im2.resize((60,60))
         img2 = ImageTk.PhotoImage(n2)
-        bu2 = Button(frm2,relief=FLAT,image=img2)
+        bu2 = Button(frm2,relief=RAISED,image=img2)
         bu2.image = img2
         bu2.place(x=15,y=25,height=30,width=30)
 
@@ -89,7 +92,7 @@ def chat_enter():
         im2 = Image.open("record.png")
         n2 = im2.resize((55,55))
         img2 = ImageTk.PhotoImage(n2)
-        bu2 = Button(frm2,relief=FLAT,image=img2)
+        bu2 = Button(frm2,relief=RAISED,image=img2)
         bu2.image = img2
         bu2.place(x=25,y=25,height=34,width=20)
 
@@ -99,7 +102,7 @@ def chat_enter():
     en1.place(x=60,y=22,height=40,width=220)
     en1.insert(0,"Text Something...")
 
-    b3=Button(frm2,text="Send",font=('calibri',11),bg=bg_clr2,fg=fg_clr2,command=lambda: respond(en1.get()))
+    b3=Button(frm2,text="Send",font=('calibri',11),bg=bg_clr2,fg=fg_clr2,activebackground=ac1,command=lambda: respond(en1.get()))
     b3.place(x=290,y=22,height=40,width=50)
 
 
