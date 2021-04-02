@@ -23,14 +23,18 @@ def chat_enter():
     if select_value == 2:
         color = "#ececec";mode = "#C0C0C0";bg_clr1="#2E8B57";fg_clr1="#F8F8FF";bg_clr2="#625f3e";fg_clr2="white"
 
-    cnt=0
+    cnt = 0
+    clp = ""
     try:
-       for i in cl:
-           cnt = cnt + 1
-           if cnt == 2:
-               color = i
+        for i in cl:
+            cnt = cnt + 1
+            if cnt == 2:
+                clp = i
     except:
-        print("")
+        print(" ")
+
+    if clp != None and clp != "":
+        color = clp
 
     frm1=Frame(bg=color)
     frm1.place(x=0,y=0,height=590,width=400)
