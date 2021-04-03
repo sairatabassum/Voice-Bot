@@ -78,7 +78,7 @@ def chat_enter():
             webbrowser.get().open(url)
             pikachu_speak("The location:")
 
-        elif 'hello' in voice_or_text_data:
+        elif 'Wikipedia' in voice_or_text_data:
             wiki=record_audio("what do you want to search in wikipedia?")
             try:
                 pikachu_speak(wikipedia.summary(wiki,sentences=3))
