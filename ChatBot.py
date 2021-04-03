@@ -225,7 +225,7 @@ def light():
     r2.place(x=290,y=450)
 
 
-    la4 = Label(fr1,text="Chat Background",font=('calibri',11,''),bg="#ececec")
+    la4 = Label(fr1,text="Background",font=('calibri',11,''),bg="#ececec")
     la4.place(x=50,y=490)
     but1 = Button(fr1,text="Pick Color",width=20,font=('calibri',10,''),bg="#878f84",fg="white",command=color)
     but1.place(x=190,y=490)
@@ -265,7 +265,7 @@ def dark():
     r2 = Radiobutton(fr1,text="Light",variable=var,value=2,bg="#262626",fg="#F5F5F5",command=light)
     r2.place(x=290,y=450)
 
-    la4 = Label(fr1,text="Chat Background",font=('calibri',11,''),bg="#262626",fg="#F5F5F5")
+    la4 = Label(fr1,text="Background",font=('calibri',11,''),bg="#262626",fg="#F5F5F5")
     la4.place(x=50,y=490)
     but1 = Button(fr1,text="Pick Color",width=20,font=('calibri',10,''),bg="#878f84",fg="white",command=color)
     but1.place(x=190,y=490)
