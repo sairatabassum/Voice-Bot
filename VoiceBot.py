@@ -184,9 +184,9 @@ def chat_enter():
         im2 = Image.open("gramophone-record.png")
         n2 = im2.resize((60,60))
         img2 = ImageTk.PhotoImage(n2)
-        bu2 = Button(frm2,relief=RAISED,image=img2,command=ri)
+        bu2 = Button(frm2,relief=RAISED,image=img2,command=ri,activebackground="#da3e3e",bg="#D3D3D3")
         bu2.image = img2
-        bu2.place(x=15,y=25,height=30,width=30)
+        bu2.place(x=70,y=20,height=50,width=250)
 
     elif select_value==2:
 
@@ -200,9 +200,9 @@ def chat_enter():
         im2 = Image.open("record.png")
         n2 = im2.resize((55,55))
         img2 = ImageTk.PhotoImage(n2)
-        bu2 = Button(frm2,relief=RAISED,image=img2,command=ri)
+        bu2 = Button(frm2,relief=RAISED,image=img2,command=ri,activebackground="#F5DEB3",bg="#DAA520")
         bu2.image = img2
-        bu2.place(x=25,y=25,height=34,width=20)
+        bu2.place(x=70,y=20,height=50,width=250)
 
 
 
