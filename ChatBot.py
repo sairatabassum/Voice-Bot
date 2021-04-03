@@ -27,6 +27,7 @@ def chat_enter():
     r = sp.Recognizer()
 
     def record_audio(ask=False):
+
         with sp.Microphone() as source:
             if ask:
                 pikachu_speak(ask)
@@ -60,19 +61,21 @@ def chat_enter():
         if 'how are you' in voice_or_text_data:
             pikachu_speak("I am fine. Nice to talk with you")
 
-        if 'what time is it now' in voice_or_text_data:
+        elif 'what time is it now' in voice_or_text_data:
             pikachu_speak("Current Local Time:")
             pikachu_speak(ctime())
-        if "search" in voice_or_text_data:
+        elif "search" in voice_or_text_data:
             search = record_audio("what do you want to search for?")
             url = 'https://google.com/search?q=' + search
             webbrowser.get().open(url)
             pikachu_speak("here is search" + search)
-        if 'find location' in voice_or_text_data:
+        elif 'find location' in voice_or_text_data:
             location = record_audio("Say the name of the location?")
             url = 'https://google.nl/maps/place/' + location + '/&amp;'
             webbrowser.get().open(url)
             pikachu_speak("The location:")
+        else:
+            pikachu_speak("I am a pikachu chatbot")
 
 
     def ri():
