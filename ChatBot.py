@@ -57,8 +57,18 @@ def chat_enter():
 
     def respond(voice_or_text_data):
 
+
         if 'what is your name' in voice_or_text_data :
+            # ---chat--
+            fr1 = Frame(frm1,bg=color)
+            fr1.place(x=0,y=0,height=590,width=400)
+
+            me = Label(fr1,text=voice_or_text_data)
+            me.place(x=200,y=20)
             pikachu_speak("My name is pikachu. I am a bot. I work for you")
+            chat=Label(fr1,text="My name is pikachu. I am a bot. I work for you")
+            chat.place(x=5,y=50)
+
 
         elif 'how are you' in voice_or_text_data:
             pikachu_speak("I am fine. Nice to talk with you")
@@ -141,10 +151,13 @@ def chat_enter():
     if clp != None and clp != "":
         color = clp
 
-    frm1=Frame(bg=color)
-    frm1.place(x=0,y=0,height=590,width=400)
+    frmi=Frame(bg=color)
+    frmi.place(x=0,y=0,height=590,width=400)
 
-    frm2=Frame(frm1,bg=mode)
+    frm1=Frame(frmi,bg=color)
+    frm1.place(x=0,y=0,height=500,width=400)
+
+    frm2=Frame(frmi,bg=mode)
     frm2.place(x=0,y=500,height=90,width=400)
 
     if select_value==1:
@@ -225,7 +238,7 @@ def light():
     r2.place(x=290,y=450)
 
 
-    la4 = Label(fr1,text="Background",font=('calibri',11,''),bg="#ececec")
+    la4 = Label(fr1,text="Chat Background",font=('calibri',11,''),bg="#ececec")
     la4.place(x=50,y=490)
     but1 = Button(fr1,text="Pick Color",width=20,font=('calibri',10,''),bg="#878f84",fg="white",command=color)
     but1.place(x=190,y=490)
@@ -265,7 +278,7 @@ def dark():
     r2 = Radiobutton(fr1,text="Light",variable=var,value=2,bg="#262626",fg="#F5F5F5",command=light)
     r2.place(x=290,y=450)
 
-    la4 = Label(fr1,text="Background",font=('calibri',11,''),bg="#262626",fg="#F5F5F5")
+    la4 = Label(fr1,text="Chat Background",font=('calibri',11,''),bg="#262626",fg="#F5F5F5")
     la4.place(x=50,y=490)
     but1 = Button(fr1,text="Pick Color",width=20,font=('calibri',10,''),bg="#878f84",fg="white",command=color)
     but1.place(x=190,y=490)
