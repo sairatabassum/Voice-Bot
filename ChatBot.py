@@ -16,12 +16,12 @@ import requests
 #--Main Windows--
 win=Tk()
 win.geometry('400x590+400+15')
-win.title("Pikachu ChatBot")
+win.title("Pikachu VoiceBot")
 win.resizable(False,False)
 win.iconbitmap(r'chabot.ico')
 win.config(bg="#ececec")
 
-#--Enter Chat-Bot--
+#--Enter Voice-Bot--
 
 def chat_enter():
 
@@ -59,28 +59,45 @@ def chat_enter():
 
 
         if 'what is your name' in voice_or_text_data :
-            # ---chat--
+            fr1=Frame(frm1,bg=color)
+            fr1.place(x=0,y=0,height=590,width=400)
+
+            chat=Label(fr1,text="My name is pikachu.\nI am a bot.I work for you",bg="#FA8072",font=('calibri',12,''))
+            chat.place(x=5,y=50)
+
+            pikachu_speak("My name is pikachu. I am a bot. I work for you")
+
+        elif 'how are you' in voice_or_text_data:
             fr1 = Frame(frm1,bg=color)
             fr1.place(x=0,y=0,height=590,width=400)
 
-            me = Label(fr1,text=voice_or_text_data)
-            me.place(x=200,y=20)
-            pikachu_speak("My name is pikachu. I am a bot. I work for you")
-            chat=Label(fr1,text="My name is pikachu. I am a bot. I work for you")
+            chat = Label(fr1,text="I am fine. Nice to talk with you",bg="#FA8072",font=('calibri',12,''))
             chat.place(x=5,y=50)
 
-
-        elif 'how are you' in voice_or_text_data:
             pikachu_speak("I am fine. Nice to talk with you")
 
         elif 'what time is it now' in voice_or_text_data:
+            fr1 = Frame(frm1,bg=color)
+            fr1.place(x=0,y=0,height=590,width=400)
+
+            chat = Label(fr1,text="Current Local time.\n"+ctime(),bg="#FA8072",font=('calibri',12,''))
+            chat.place(x=5,y=50)
+
             pikachu_speak("Current Local Time:")
             pikachu_speak(ctime())
 
         elif "search" in voice_or_text_data:
+            fr1 = Frame(frm1,bg=color)
+            fr1.place(x=0,y=0,height=590,width=400)
+
             search = record_audio("what do you want to search for?")
+
             url = 'https://google.com/search?q=' + search
             webbrowser.get().open(url)
+
+            chat1 = Label(fr1,text="Here is search:",bg="#3CB371",font=('calibri',12,''))
+            chat1.place(x=5,y=110)
+
             pikachu_speak("here is search" + search)
 
         elif 'find location' in voice_or_text_data:
@@ -91,6 +108,7 @@ def chat_enter():
 
         elif 'Wikipedia' in voice_or_text_data:
             wiki=record_audio("what do you want to search in wikipedia?")
+
             try:
                 pikachu_speak(wikipedia.summary(wiki,sentences=3))
             except:
@@ -191,14 +209,6 @@ def chat_enter():
         bu2.place(x=25,y=25,height=34,width=20)
 
 
-    txt=StringVar()
-    en1=Entry(frm2,textvariable=txt,font=('Arial',15,'bold'),bg=bg_clr1,fg=fg_clr1)
-    en1.place(x=60,y=22,height=40,width=220)
-    en1.insert(0,"Text Something...")
-
-    b3=Button(frm2,text="Send",font=('calibri',11),bg=bg_clr2,fg=fg_clr2,activebackground=ac1,command=lambda: respond(en1.get()))
-    b3.place(x=290,y=22,height=40,width=50)
-
 
 
 # --Color Palette--
@@ -222,8 +232,8 @@ def light():
     la1 = Label(fr1,text="Welcome to Pikachu",font=('veranda',25,''),bg="#ececec")
     la1.place(x=50,y=310)
 
-    la2 = Label(fr1,text="ChatBot",font=('veranda',25,''),bg="#ececec")
-    la2.place(x=140,y=360)
+    la2 = Label(fr1,text="VoiceBot",font=('veranda',25,''),bg="#ececec")
+    la2.place(x=130,y=360)
 
     # --Theme & Chat background--
     la3 = Label(fr1,text="Theme",font=('calibri',11,''),bg="#ececec")
@@ -238,7 +248,7 @@ def light():
     r2.place(x=290,y=450)
 
 
-    la4 = Label(fr1,text="Chat Background",font=('calibri',11,''),bg="#ececec")
+    la4 = Label(fr1,text="Background",font=('calibri',11,''),bg="#ececec")
     la4.place(x=50,y=490)
     but1 = Button(fr1,text="Pick Color",width=20,font=('calibri',10,''),bg="#878f84",fg="white",command=color)
     but1.place(x=190,y=490)
@@ -263,8 +273,8 @@ def dark():
     la1 = Label(fr1,text="Welcome to Pikachu",font=('veranda',25,''),bg="#262626",fg="#F5F5F5")
     la1.place(x=50,y=310)
 
-    la2 = Label(fr1,text="ChatBot",font=('veranda',25,''),bg="#262626",fg="#F5F5F5")
-    la2.place(x=140,y=360)
+    la2 = Label(fr1,text="VoiceBot",font=('veranda',25,''),bg="#262626",fg="#F5F5F5")
+    la2.place(x=130,y=360)
 
     # --Theme & Chat background--
     la3 = Label(fr1,text="Theme",font=('calibri',11,''),bg="#262626",fg="#F5F5F5")
@@ -278,7 +288,7 @@ def dark():
     r2 = Radiobutton(fr1,text="Light",variable=var,value=2,bg="#262626",fg="#F5F5F5",command=light)
     r2.place(x=290,y=450)
 
-    la4 = Label(fr1,text="Chat Background",font=('calibri',11,''),bg="#262626",fg="#F5F5F5")
+    la4 = Label(fr1,text="Background",font=('calibri',11,''),bg="#262626",fg="#F5F5F5")
     la4.place(x=50,y=490)
     but1 = Button(fr1,text="Pick Color",width=20,font=('calibri',10,''),bg="#878f84",fg="white",command=color)
     but1.place(x=190,y=490)
