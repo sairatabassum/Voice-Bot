@@ -13,7 +13,7 @@ import time
 import requests
 
 
-#--Main Windows--
+#--Main Windows-
 win=Tk()
 win.geometry('400x590+400+15')
 win.title("Pikachu VoiceBot")
