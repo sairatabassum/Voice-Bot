@@ -146,7 +146,7 @@ def chat_enter():
     en1.place(x=60,y=22,height=40,width=220)
     en1.insert(0,"Text Something...")
 
-    b3=Button(frm2,text="Send",font=('calibri',11),bg=bg_clr2,fg=fg_clr2,activebackground=ac1,command=lambda: respond(en1.get()))
+    b3=Button(frm2,text="Send",font=('calibri',11),bg=bg_clr2,fg=fg_clr2,activebackground=ac1)
     b3.place(x=290,y=22,height=40,width=50)
 
 
