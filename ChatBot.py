@@ -61,21 +61,20 @@ def chat_enter():
         if 'how are you' in voice_or_text_data:
             pikachu_speak("I am fine. Nice to talk with you")
 
-        elif 'what time is it now' in voice_or_text_data:
+        if 'what time is it now' in voice_or_text_data:
             pikachu_speak("Current Local Time:")
             pikachu_speak(ctime())
-        elif "search" in voice_or_text_data:
+        if "search" in voice_or_text_data:
             search = record_audio("what do you want to search for?")
             url = 'https://google.com/search?q=' + search
             webbrowser.get().open(url)
             pikachu_speak("here is search" + search)
-        elif 'find location' in voice_or_text_data:
+        if 'find location' in voice_or_text_data:
             location = record_audio("Say the name of the location?")
             url = 'https://google.nl/maps/place/' + location + '/&amp;'
             webbrowser.get().open(url)
             pikachu_speak("The location:")
-        else:
-            pikachu_speak("I am a pikachu chatbot")
+
 
 
     def ri():
