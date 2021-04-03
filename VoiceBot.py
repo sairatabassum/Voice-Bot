@@ -13,7 +13,7 @@ import time
 import requests
 
 
-#--Main Windows-
+#--Main Windows--
 win=Tk()
 win.geometry('400x590+400+15')
 win.title("Pikachu VoiceBot")
@@ -31,22 +31,31 @@ def chat_enter():
     def record_audio(ask=False):
 
         with sp.Microphone() as source:
+
             if ask:
+
                 pikachu_speak(ask)
             audio = r.record(source,duration=3)
             text = ''
 
             try:
+
                 text = r.recognize_google(audio)
 
             except sp.UnknownValueError:
+
                 pikachu_speak("Sorry I did not get that")
 
+
             except sp.RequestError:
+
                 pikachu_speak("Sorry, my speech service is down")
+
         return text
 
+
     def pikachu_speak(audio_string):
+
         adio=gTTS(text=audio_string,lang='en')
         ran=random.randint(1,10000000)
         audio_file='audio-'+str(ran)+'.mp3'
@@ -59,60 +68,41 @@ def chat_enter():
 
 
         if 'what is your name' in voice_or_text_data :
-            fr1=Frame(frm1,bg=color)
-            fr1.place(x=0,y=0,height=590,width=400)
-
-            chat=Label(fr1,text="My name is pikachu.\nI am a bot.I work for you",bg="#FA8072",font=('calibri',12,''))
-            chat.place(x=5,y=50)
 
             pikachu_speak("My name is pikachu. I am a bot. I work for you")
 
         elif 'how are you' in voice_or_text_data:
-            fr1 = Frame(frm1,bg=color)
-            fr1.place(x=0,y=0,height=590,width=400)
-
-            chat = Label(fr1,text="I am fine. Nice to talk with you",bg="#FA8072",font=('calibri',12,''))
-            chat.place(x=5,y=50)
 
             pikachu_speak("I am fine. Nice to talk with you")
 
         elif 'what time is it now' in voice_or_text_data:
-            fr1 = Frame(frm1,bg=color)
-            fr1.place(x=0,y=0,height=590,width=400)
-
-            chat = Label(fr1,text="Current Local time.\n"+ctime(),bg="#FA8072",font=('calibri',12,''))
-            chat.place(x=5,y=50)
 
             pikachu_speak("Current Local Time:")
             pikachu_speak(ctime())
 
         elif "search" in voice_or_text_data:
-            fr1 = Frame(frm1,bg=color)
-            fr1.place(x=0,y=0,height=590,width=400)
 
             search = record_audio("what do you want to search for?")
-
             url = 'https://google.com/search?q=' + search
             webbrowser.get().open(url)
-
-            chat1 = Label(fr1,text="Here is search:",bg="#3CB371",font=('calibri',12,''))
-            chat1.place(x=5,y=110)
-
             pikachu_speak("here is search" + search)
 
         elif 'find location' in voice_or_text_data:
+
             location = record_audio("Say the name of the location?")
             url = 'https://google.nl/maps/place/' + location + '/&amp;'
             webbrowser.get().open(url)
-            pikachu_speak("The location:")
+            pikachu_speak("The location map:")
 
         elif 'Wikipedia' in voice_or_text_data:
+
             wiki=record_audio("what do you want to search in wikipedia?")
 
             try:
                 pikachu_speak(wikipedia.summary(wiki,sentences=3))
             except:
                 pikachu_speak("Not found")
+
         elif 'weather' in voice_or_text_data:
 
             location=record_audio("Say the name of the location:")
@@ -127,8 +117,10 @@ def chat_enter():
             wind_speed = api_data['wind']['speed']
 
             if api_data['cod']=='404':
+
                 pikachu_speak("Incorrect location name.Please check the location")
             else:
+
                 temp=float("{:.2f}".format(city))
                 pikachu_speak("Current temperature is: "+str(temp)+" degree Celsius")
                 pikachu_speak("Weather forecast :" + weather)
@@ -136,11 +128,13 @@ def chat_enter():
                 pikachu_speak("Wind speed :" + str(wind_speed) + 'kilometre per hour')
 
         else:
+
             pikachu_speak("I am a pikachu chatbot")
 
 
 
     def ri():
+
         voice_data = record_audio()
         respond(voice_data)
 
@@ -179,6 +173,7 @@ def chat_enter():
     frm2.place(x=0,y=500,height=90,width=400)
 
     if select_value==1:
+
         im=Image.open("setting.png")
         n=im.resize((48,48))
         img=ImageTk.PhotoImage(n)
@@ -194,6 +189,7 @@ def chat_enter():
         bu2.place(x=15,y=25,height=30,width=30)
 
     elif select_value==2:
+
         im=Image.open("green-settings.png")
         n=im.resize((40,40))
         img=ImageTk.PhotoImage(n)
