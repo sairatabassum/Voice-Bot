@@ -56,7 +56,7 @@ def chat_enter():
 
     def respond(voice_or_text_data):
 
-        if 'what is your name' in voice_or_text_data:
+        if 'what is your name' in voice_or_text_data :
             pikachu_speak("My name is pikachu. I am a bot. I work for you")
 
         elif 'how are you' in voice_or_text_data:
@@ -160,7 +160,7 @@ def chat_enter():
     en1.place(x=60,y=22,height=40,width=220)
     en1.insert(0,"Text Something...")
 
-    b3=Button(frm2,text="Send",font=('calibri',11),bg=bg_clr2,fg=fg_clr2,activebackground=ac1)
+    b3=Button(frm2,text="Send",font=('calibri',11),bg=bg_clr2,fg=fg_clr2,activebackground=ac1,command=lambda: respond(en1.get()))
     b3.place(x=290,y=22,height=40,width=50)
 
 
