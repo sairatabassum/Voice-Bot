@@ -22,6 +22,27 @@ win.config(bg="#ececec")
 #--Enter Chat-Bot--
 
 def chat_enter():
+
+
+    r = sp.Recognizer()
+
+    def record_audio(ask=False):
+        with sp.Microphone() as source:
+            if ask:
+                pikachu_speak(ask)
+            audio = r.record(source,duration=3)
+            text = ''
+
+            try:
+                text = r.recognize_google(audio)
+
+            except sp.UnknownValueError:
+                pikachu_speak("Sorry I did not get that")
+
+            except sp.RequestError:
+                pikachu_speak("Sorry, my speech service is down")
+        return text
+
     def pikachu_speak(audio_string):
         adio=gTTS(text=audio_string,lang='en')
         ran=random.randint(1,10000000)
@@ -34,7 +55,30 @@ def chat_enter():
     def respond(voice_or_text_data):
 
         if 'what is your name' in voice_or_text_data:
-            pikachu_speak("My name is pikachu")
+            pikachu_speak("My name is pikachu. I am a bot. I work for you")
+
+        if 'how are you' in voice_or_text_data:
+            pikachu_speak("I am fine. Nice to talk with you")
+
+        if 'what time is it now' in voice_or_text_data:
+            pikachu_speak("Current Local Time:")
+            pikachu_speak(ctime())
+        if "search" in voice_or_text_data:
+            search = record_audio("what do you want to search for?")
+            url = 'https://google.com/search?q=' + search
+            webbrowser.get().open(url)
+            pikachu_speak("here is search" + search)
+        if 'find location' in voice_or_text_data:
+            location = record_audio("Say the name of the location?")
+            url = 'https://google.nl/maps/place/' + location + '/&amp;'
+            webbrowser.get().open(url)
+            pikachu_speak("The location:")
+
+
+    def ri():
+        voice_data = record_audio()
+        respond(voice_data)
+
 
 
     global cl
@@ -77,7 +121,7 @@ def chat_enter():
         im2 = Image.open("gramophone-record.png")
         n2 = im2.resize((60,60))
         img2 = ImageTk.PhotoImage(n2)
-        bu2 = Button(frm2,relief=RAISED,image=img2)
+        bu2 = Button(frm2,relief=RAISED,image=img2,command=ri)
         bu2.image = img2
         bu2.place(x=15,y=25,height=30,width=30)
 
@@ -92,7 +136,7 @@ def chat_enter():
         im2 = Image.open("record.png")
         n2 = im2.resize((55,55))
         img2 = ImageTk.PhotoImage(n2)
-        bu2 = Button(frm2,relief=RAISED,image=img2)
+        bu2 = Button(frm2,relief=RAISED,image=img2,command=ri)
         bu2.image = img2
         bu2.place(x=25,y=25,height=34,width=20)
 
