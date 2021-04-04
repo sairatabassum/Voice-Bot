@@ -51,7 +51,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.j">
+  <component name="RunManager" selected="Python.VoiceBot">
     <configuration name="ChatBot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Voice-Assistant-ChatBot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -138,8 +138,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.j" />
         <item itemvalue="Python.VoiceBot" />
+        <item itemvalue="Python.j" />
         <item itemvalue="Python.Stop_Watch" />
         <item itemvalue="Python.ChatBot" />
       </list>
@@ -301,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617519966696</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="commit">
+      <created>1617563836671</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1617563836731</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -337,30 +344,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617521292371" />
-    <state width="1345" height="182" key="GridCell.Tab.0.bottom" timestamp="1617563500310">
+    <state width="1345" height="182" key="GridCell.Tab.0.bottom" timestamp="1617567661680">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617563500310" />
-    <state width="1345" height="182" key="GridCell.Tab.0.center" timestamp="1617563500310">
+    <state width="1345" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617567661680" />
+    <state width="1345" height="182" key="GridCell.Tab.0.center" timestamp="1617567661679">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617563500310" />
-    <state width="1345" height="182" key="GridCell.Tab.0.left" timestamp="1617563500310">
+    <state width="1345" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617567661679" />
+    <state width="1345" height="182" key="GridCell.Tab.0.left" timestamp="1617567661679">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617563500310" />
-    <state width="1345" height="182" key="GridCell.Tab.0.right" timestamp="1617563500310">
+    <state width="1345" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617567661679" />
+    <state width="1345" height="182" key="GridCell.Tab.0.right" timestamp="1617567661680">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617563500310" />
+    <state width="1345" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617567661680" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1617522648738">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617522648738" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1617519973137">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1617563854581">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1617519973137" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1617563854581" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617432720788">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

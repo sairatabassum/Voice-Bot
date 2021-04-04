@@ -11,6 +11,8 @@ from gtts import gTTS
 import time
 import requests
 import bs4
+from tkinter import messagebox
+
 
 
 #--Main Windows--
@@ -166,15 +168,92 @@ def chat_enter():
                 pikachu_speak("Country name is not found.")
                 l1.config(text="Country name is not found.")
 
-        elif 'i want to set a time' in voice_or_text_data:
+        elif 'set a time' in voice_or_text_data:
             pikachu_speak("Here is Time counter. Set a time")
+            l1.config(text="Here is Time counter. Set a time")
+
+            #---Time Counter---
+            win1 = Toplevel(win)
+            win1.title("Time Counter")
+            win1.geometry("340x220+430+200")
+            win1.resizable(False,False)
+            win1.config(bg="#DAA520")
+
+            def tim():
+                try:
+                    total_sec = int(hour.get()) * 3600 + int(minute.get()) * 60 + int(second.get())
+                except:
+                    messagebox.showerror("Error","Input the correct value")
+
+                while total_sec >= 0:
+                    hours = 0
+                    # ins=total_sec/60; secs=total_sec%60
+                    mins,secs = divmod(total_sec,60)
+
+                    if mins > 60:
+                        # hours=total_sec/60 ;mins=total_sec%60
+                        hours,mins = divmod(total_sec,60)
+
+                    hour.set("{0:2d}".format(hours))
+                    minute.set("{0:2d}".format(mins))
+                    second.set("{0:2d}".format(secs))
+
+                    win1.update()
+                    time.sleep(1)
+
+                    if (total_sec == 0):
+                        win2 = Toplevel(win)
+                        win2.title("Time Counter")
+                        win2.geometry("340x150+430+200")
+                        win2.resizable(False,False)
+                        win2.config(bg="#DAA520")
+
+                        def win_destroy():
+                            win2.destroy()
+                            win1.destroy()
+
+                        la1 = Label(win2,text="Time's up",font=('calibri',30,'bold'),fg="#fe1a0e",bg="#DAA520")
+                        la1.place(x=90,y=8)
+
+                        but = Button(win2,text="OK",height=1,width=8,font=('veranda',10,''),command=win_destroy,
+                                     bg="#F5DEB3")
+                        but.place(x=130,y=90)
+
+                        win2.mainloop()
+
+                    total_sec = total_sec - 1
+
+            hour = StringVar()
+            minute = StringVar()
+            second = StringVar()
+
+            hour.set("00")
+            minute.set("00")
+            second.set("00")
+
+            h1 = Entry(win1,width=3,font=('Arial',30,''),textvariable=hour)
+            h1.place(x=50,y=30)
+
+            m1 = Entry(win1,width=3,font=('Arial',30,''),textvariable=minute)
+            m1.place(x=140,y=30)
+
+            s1 = Entry(win1,width=3,font=('Arial',30,''),textvariable=second)
+            s1.place(x=230,y=30)
+
+            buto = Button(win1,text="Set Time",height=1,width=8,font=('verandra',10,''),bg="#008080",bd=5,fg="white",
+                          command=tim)
+            buto.place(x=130,y=130)
+
+            win1.mainloop()
+
+
 
         else:
 
             pikachu_speak("I am a pikachu chatbot")
             l1.config(text="I am a pikachu chatbot.")
 
-
+        print(voice_or_text_data)
 
 
 
