@@ -8,7 +8,6 @@ import playsound
 import os
 import random
 from gtts import gTTS
-import wikipedia
 import time
 import requests
 
@@ -107,18 +106,14 @@ def chat_enter():
 
             wiki=record_audio("what do you want to search in wikipedia?")
 
+            url = 'https://en.wikipedia.org/wiki/=' + wiki
+            webbrowser.get().open(url)
+            l1.config(text="Here is wikipedia:\n" + wiki)
+            pikachu_speak("Here is wikipedia " + wiki)
 
-            try:
 
-                pikachu_speak(wikipedia.summary(wiki,sentences=3))
-
-
-
-            except:
-                pikachu_speak("Not found")
 
         elif 'weather' in voice_or_text_data:
-
 
             location=record_audio("Say the name of the city:")
             link = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=c4c80c6387c03dde649323ba4e878114"
@@ -129,6 +124,7 @@ def chat_enter():
             if api_data['cod']=='404':
 
                 pikachu_speak("Incorrect location name.Please check the location")
+                l1.config(text="Incorrect location name.\nPlease check the location.")
             else:
 
                 # Store data
@@ -140,7 +136,7 @@ def chat_enter():
                 temp=float("{:.2f}".format(city))
 
                 l1.config(text="Location Name :"+location+"\nCurrent temperature is: "+str(temp)+" degree Celsius\nWeather forecast : " + weather+"\nHumidity : " +str( humadity)+" %\nWind speed : " + str(wind_speed) + "km/h",font=('calibri',12,''))
-                l1.place(x=60,y=360)
+
                 pikachu_speak("Current temperature is: "+str(temp)+" degree Celsius")
                 pikachu_speak("Weather forecast :" + weather)
                 pikachu_speak("Humidity :" +str( humadity)+" percentage")
@@ -149,6 +145,7 @@ def chat_enter():
         else:
 
             pikachu_speak("I am a pikachu chatbot")
+            l1.config(text="I am a pikachu chatbot.")
 
 
 
