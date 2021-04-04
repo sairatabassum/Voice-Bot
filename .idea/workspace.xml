@@ -21,6 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f1c6abb5-1eb6-4822-aebd-98011e6551dc" name="Default Changelist" comment="commit">
       <change afterPath="$PROJECT_DIR$/audio-1832958.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio-3209849.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio-5021888.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio-9440328.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoiceBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/VoiceBot.py" afterDir="false" />
     </list>
@@ -44,11 +47,11 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Voice-Assistant-ChatBot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../untitled8/j.py" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.VoiceBot">
+  <component name="RunManager" selected="Python.j">
     <configuration name="ChatBot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Voice-Assistant-ChatBot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -62,6 +65,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ChatBot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Stop_Watch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Voice-Assistant-ChatBot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../untitled8" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../untitled8/Stop_Watch.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -114,9 +138,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.VoiceBot" />
-        <item itemvalue="Python.ChatBot" />
         <item itemvalue="Python.j" />
+        <item itemvalue="Python.VoiceBot" />
+        <item itemvalue="Python.Stop_Watch" />
+        <item itemvalue="Python.ChatBot" />
       </list>
     </recent_temporary>
   </component>
@@ -269,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617515863493</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="commit">
+      <created>1617519966681</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1617519966696</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -301,34 +333,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="416" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1617432409261" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1617471681913">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1617521292371">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617471681913" />
-    <state width="1345" height="182" key="GridCell.Tab.0.bottom" timestamp="1617519935972">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617521292371" />
+    <state width="1345" height="182" key="GridCell.Tab.0.bottom" timestamp="1617563500310">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617519935972" />
-    <state width="1345" height="182" key="GridCell.Tab.0.center" timestamp="1617519935970">
+    <state width="1345" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617563500310" />
+    <state width="1345" height="182" key="GridCell.Tab.0.center" timestamp="1617563500310">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617519935970" />
-    <state width="1345" height="182" key="GridCell.Tab.0.left" timestamp="1617519935970">
+    <state width="1345" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617563500310" />
+    <state width="1345" height="182" key="GridCell.Tab.0.left" timestamp="1617563500310">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617519935970" />
-    <state width="1345" height="182" key="GridCell.Tab.0.right" timestamp="1617519935971">
+    <state width="1345" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617563500310" />
+    <state width="1345" height="182" key="GridCell.Tab.0.right" timestamp="1617563500310">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617519935971" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1617516015540">
+    <state width="1345" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617563500310" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1617522648738">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617516015540" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1617519206944">
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617522648738" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1617519973137">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1617519206944" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1617519973137" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617432720788">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

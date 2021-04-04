@@ -10,6 +10,7 @@ import random
 from gtts import gTTS
 import time
 import requests
+import bs4
 
 
 #--Main Windows--
@@ -20,8 +21,13 @@ win.resizable(False,False)
 win.iconbitmap(r'chabot.ico')
 win.config(bg="#ececec")
 
-#--Enter Voice-Bot--
+'''
+Before running this program,download or install
+---pip install pillow
+---install Image
+'''
 
+#--Enter Voice-Bot--
 def chat_enter():
 
 
@@ -66,7 +72,6 @@ def chat_enter():
     def respond(voice_or_text_data):
 
 
-
         if 'what is your name' in voice_or_text_data :
 
             l1.config(text="My name is pikachu.\nI am a bot.I work for you")
@@ -84,7 +89,6 @@ def chat_enter():
             l1.config(text="Current Local Time:\n" + ctime())
 
 
-
         elif "search" in voice_or_text_data:
 
             search = record_audio("what do you want to search for?")
@@ -99,7 +103,7 @@ def chat_enter():
             location = record_audio("Say the name of the location?")
             url = 'https://google.nl/maps/place/' + location + '/&amp;'
             webbrowser.get().open(url)
-            pikachu_speak("The location map:")
+            pikachu_speak("The location map: "+location)
             l1.config(text="The location map:\n"+location)
 
         elif 'Wikipedia' in voice_or_text_data:
@@ -135,17 +139,42 @@ def chat_enter():
 
                 temp=float("{:.2f}".format(city))
 
-                l1.config(text="Location Name :"+location+"\nCurrent temperature is: "+str(temp)+" degree Celsius\nWeather forecast : " + weather+"\nHumidity : " +str( humadity)+" %\nWind speed : " + str(wind_speed) + "km/h",font=('calibri',12,''))
+                l1.config(text="Location Name: "+location+"\nCurrent temperature is: "+str(temp)+" degree Celsius\nWeather forecast : " + weather+"\nHumidity : " +str( humadity)+" %\nWind speed : " + str(wind_speed) + "km/h",font=('calibri',12,''))
 
                 pikachu_speak("Current temperature is: "+str(temp)+" degree Celsius")
-                pikachu_speak("Weather forecast :" + weather)
-                pikachu_speak("Humidity :" +str( humadity)+" percentage")
-                pikachu_speak("Wind speed :" + str(wind_speed) + 'kilometre per hour')
+                pikachu_speak("Weather forecast: " + weather)
+                pikachu_speak("Humidity: " +str( humadity)+" percentage")
+                pikachu_speak("Wind speed: " + str(wind_speed) + 'kilometre per hour')
+        elif 'covid-19' in voice_or_text_data:
+
+            country=record_audio("Which country?")
+            url = "https://worldometers.info/coronavirus/country/"+country+"/"
+            html_data = requests.get(url)
+            web_scrap = bs4.BeautifulSoup(html_data.text,'html.parser')
+            all_info = ""
+
+            try:
+                info = web_scrap.find("div",class_="content-inner").findAll("div",id="maincounter-wrap")
+
+                for block in info:
+                    h1 = block.find("h1",class_=None).get_text()
+                    span = block.find("span",class_=None).get_text()
+                    all_info = all_info + h1 + " " + span + "\n"
+                pikachu_speak("Country name: "+country+"\n"+all_info)
+                l1.config(text="Country name: "+country+"\n"+all_info)
+            except:
+                pikachu_speak("Country name is not found.")
+                l1.config(text="Country name is not found.")
+
+        elif 'i want to set a time' in voice_or_text_data:
+            pikachu_speak("Here is Time counter. Set a time")
 
         else:
 
             pikachu_speak("I am a pikachu chatbot")
             l1.config(text="I am a pikachu chatbot.")
+
+
 
 
 
@@ -235,6 +264,7 @@ def chat_enter():
 def color():
     global cl
     cl = colorchooser.askcolor()
+
 
 # --Change into Light Mode--
 def light():
