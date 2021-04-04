@@ -66,22 +66,25 @@ def chat_enter():
 
     def respond(voice_or_text_data):
 
-        l1 = Label(frm1,text="",bg="#FA8072",font=('calibri',12,''))
-        l1.place(x=-10,y=400)
+
 
         if 'what is your name' in voice_or_text_data :
 
-            l1.config(text="My name is pikachu. I am a bot. I work for you")
+            l1.config(text="My name is pikachu.\nI am a bot.I work for you")
             pikachu_speak("My name is pikachu. I am a bot. I work for you")
 
         elif 'how are you' in voice_or_text_data:
 
-            pikachu_speak("I am fine. Nice to talk with you")
+            pikachu_speak("I am fine.Nice to talk with you")
+            l1.config(text="I am fine.\nNice to talk with you")
 
         elif 'what time is it now' in voice_or_text_data:
 
             pikachu_speak("Current Local Time:")
             pikachu_speak(ctime())
+            l1.config(text="Current Local Time:\n" + ctime())
+
+
 
         elif "search" in voice_or_text_data:
 
@@ -89,6 +92,8 @@ def chat_enter():
             url = 'https://google.com/search?q=' + search
             webbrowser.get().open(url)
             pikachu_speak("here is search" + search)
+            l1.config(text="Here is search:\n" + search)
+
 
         elif 'find location' in voice_or_text_data:
 
@@ -96,6 +101,7 @@ def chat_enter():
             url = 'https://google.nl/maps/place/' + location + '/&amp;'
             webbrowser.get().open(url)
             pikachu_speak("The location map:")
+            l1.config(text="The location map:\n"+location)
 
         elif 'Wikipedia' in voice_or_text_data:
 
@@ -105,6 +111,7 @@ def chat_enter():
             try:
 
                 pikachu_speak(wikipedia.summary(wiki,sentences=3))
+
 
 
             except:
@@ -132,7 +139,7 @@ def chat_enter():
 
                 temp=float("{:.2f}".format(city))
 
-                l1.config(text="Location Name :"+location+"\nCurrent temperature is: "+str(temp)+" degree Celsius\nWeather forecast : " + weather+"\nHumidity : " +str( humadity)+" %\nWind speed : " + str(wind_speed) + "km/h")
+                l1.config(text="Location Name :"+location+"\nCurrent temperature is: "+str(temp)+" degree Celsius\nWeather forecast : " + weather+"\nHumidity : " +str( humadity)+" %\nWind speed : " + str(wind_speed) + "km/h",font=('calibri',12,''))
                 l1.place(x=60,y=360)
                 pikachu_speak("Current temperature is: "+str(temp)+" degree Celsius")
                 pikachu_speak("Weather forecast :" + weather)
@@ -223,7 +230,8 @@ def chat_enter():
     p.image = image
     p.place(x=50,y=10)
 
-
+    l1 = Label(frm1,text="Result",bg="#FA8072",font=('calibri',15,''))
+    l1.place(x=50,y=340,height=130,width=300)
 
 
 # --Color Palette--
