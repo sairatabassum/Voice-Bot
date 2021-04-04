@@ -66,9 +66,12 @@ def chat_enter():
 
     def respond(voice_or_text_data):
 
+        l1 = Label(frm1,text="",bg="#FA8072",font=('calibri',12,''))
+        l1.place(x=-10,y=400)
 
         if 'what is your name' in voice_or_text_data :
 
+            l1.config(text="My name is pikachu. I am a bot. I work for you")
             pikachu_speak("My name is pikachu. I am a bot. I work for you")
 
         elif 'how are you' in voice_or_text_data:
@@ -98,30 +101,39 @@ def chat_enter():
 
             wiki=record_audio("what do you want to search in wikipedia?")
 
+
             try:
+
                 pikachu_speak(wikipedia.summary(wiki,sentences=3))
+
+
             except:
                 pikachu_speak("Not found")
 
         elif 'weather' in voice_or_text_data:
 
-            location=record_audio("Say the name of the location:")
+
+            location=record_audio("Say the name of the city:")
             link = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=c4c80c6387c03dde649323ba4e878114"
             api_link = requests.get(link)
             api_data = api_link.json()
 
-            #Store data
-            city = ((api_data['main']['temp']) - 273.15)
-            weather = api_data['weather'][0]['description']
-            humadity = api_data['main']['humidity']
-            wind_speed = api_data['wind']['speed']
 
             if api_data['cod']=='404':
 
                 pikachu_speak("Incorrect location name.Please check the location")
             else:
 
+                # Store data
+                city = ((api_data['main']['temp']) - 273.15)
+                weather = api_data['weather'][0]['description']
+                humadity = api_data['main']['humidity']
+                wind_speed = api_data['wind']['speed']
+
                 temp=float("{:.2f}".format(city))
+
+                l1.config(text="Location Name :"+location+"\nCurrent temperature is: "+str(temp)+" degree Celsius\nWeather forecast : " + weather+"\nHumidity : " +str( humadity)+" %\nWind speed : " + str(wind_speed) + "km/h")
+                l1.place(x=60,y=360)
                 pikachu_speak("Current temperature is: "+str(temp)+" degree Celsius")
                 pikachu_speak("Weather forecast :" + weather)
                 pikachu_speak("Humidity :" +str( humadity)+" percentage")
@@ -203,6 +215,13 @@ def chat_enter():
         bu2 = Button(frm2,relief=RAISED,image=img2,command=ri,activebackground="#F5DEB3",bg="#DAA520")
         bu2.image = img2
         bu2.place(x=70,y=20,height=50,width=250)
+
+    i=Image.open("ot.png")
+    po=i.resize((300,300))
+    image = ImageTk.PhotoImage(po)
+    p = Label(frm1,image=image,bg=color)
+    p.image = image
+    p.place(x=50,y=10)
 
 
 
