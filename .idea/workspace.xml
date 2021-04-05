@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1c6abb5-1eb6-4822-aebd-98011e6551dc" name="Default Changelist" comment="commit">
+    <list default="true" id="f1c6abb5-1eb6-4822-aebd-98011e6551dc" name="Default Changelist" comment="timer">
       <change afterPath="$PROJECT_DIR$/audio-1832958.mp3" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/audio-3209849.mp3" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/audio-5021888.mp3" afterDir="false" />
@@ -47,7 +47,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../untitled8/j.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Library_System" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -65,6 +65,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ChatBot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Library" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Voice-Assistant-ChatBot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Library_System" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Library_System/Library.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -139,6 +160,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.VoiceBot" />
+        <item itemvalue="Python.Library" />
         <item itemvalue="Python.j" />
         <item itemvalue="Python.Stop_Watch" />
         <item itemvalue="Python.ChatBot" />
@@ -308,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617563836731</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="timer">
+      <created>1617567786655</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1617567786655</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -329,7 +358,8 @@
     <MESSAGE value="record" />
     <MESSAGE value="weather" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="timer" />
+    <option name="LAST_COMMIT_MESSAGE" value="timer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617372676535">
@@ -340,34 +370,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="416" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1617432409261" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1617521292371">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1617602319254">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617521292371" />
-    <state width="1345" height="182" key="GridCell.Tab.0.bottom" timestamp="1617567661680">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617602319254" />
+    <state width="1345" height="182" key="GridCell.Tab.0.bottom" timestamp="1617602918679">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617567661680" />
-    <state width="1345" height="182" key="GridCell.Tab.0.center" timestamp="1617567661679">
+    <state width="1345" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617602918679" />
+    <state width="1345" height="182" key="GridCell.Tab.0.center" timestamp="1617602918677">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617567661679" />
-    <state width="1345" height="182" key="GridCell.Tab.0.left" timestamp="1617567661679">
+    <state width="1345" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617602918677" />
+    <state width="1345" height="182" key="GridCell.Tab.0.left" timestamp="1617602918677">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617567661679" />
-    <state width="1345" height="182" key="GridCell.Tab.0.right" timestamp="1617567661680">
+    <state width="1345" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617602918677" />
+    <state width="1345" height="182" key="GridCell.Tab.0.right" timestamp="1617602918679">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617567661680" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1617522648738">
+    <state width="1345" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617602918679" />
+    <state x="293" y="20" width="998" height="708" key="SettingsEditor" timestamp="1617603355107">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617522648738" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1617563854581">
+    <state x="293" y="20" width="998" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617603355107" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1617567801761">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1617563854581" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1617567801761" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617432720788">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

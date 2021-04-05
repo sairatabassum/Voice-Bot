@@ -24,9 +24,18 @@ win.iconbitmap(r'chabot.ico')
 win.config(bg="#ececec")
 
 '''
-Before running this program,download or install
----pip install pillow
----install Image
+Before running this program,download or install:
+
+pip install pillow
+pip install SpeechRecognition
+pip install pipwin
+pipwin install pyaudio
+pip install pillow
+pip install gTTS
+pip install requests
+pip install bs4
+pip install playsound
+
 '''
 
 #--Enter Voice-Bot--
@@ -147,6 +156,7 @@ def chat_enter():
                 pikachu_speak("Weather forecast: " + weather)
                 pikachu_speak("Humidity: " +str( humadity)+" percentage")
                 pikachu_speak("Wind speed: " + str(wind_speed) + 'kilometre per hour')
+
         elif 'covid-19' in voice_or_text_data:
 
             country=record_audio("Which country?")
@@ -164,6 +174,7 @@ def chat_enter():
                     all_info = all_info + h1 + " " + span + "\n"
                 pikachu_speak("Country name: "+country+"\n"+all_info)
                 l1.config(text="Country name: "+country+"\n"+all_info)
+
             except:
                 pikachu_speak("Country name is not found.")
                 l1.config(text="Country name is not found.")
