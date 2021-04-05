@@ -51,7 +51,7 @@ def chat_enter():
             if ask:
 
                 pikachu_speak(ask)
-            audio = r.record(source,duration=5)
+            audio = r.record(source,duration=4)
             text = ''
 
             try:

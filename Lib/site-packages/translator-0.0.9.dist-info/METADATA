@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: translator
+Version: 0.0.9
+Summary: Translate text using google translate
+Home-page: https://github.com/kindlychung/translator
+Author: Kaiyin Zhong
+Author-email: kindlychung@gmail.com
+License: UNKNOWN
+Keywords: gmail,email
+Platform: UNKNOWN
+Requires-Dist: beautifulsoup4 (>=4.0)
+
+UNKNOWN
+
+
