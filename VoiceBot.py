@@ -51,7 +51,7 @@ def chat_enter():
             if ask:
 
                 pikachu_speak(ask)
-            audio = r.record(source,duration=3)
+            audio = r.record(source,duration=5)
             text = ''
 
             try:
@@ -256,7 +256,39 @@ def chat_enter():
             buto.place(x=130,y=130)
 
             win1.mainloop()
+        elif 'add item' in voice_or_text_data:
 
+            li=record_audio("What do you want to add in list?")
+            pikachu_speak("Added. Here is List")
+            l1.config(text="Added. Here is List")
+
+            win1 = Toplevel(win)
+            win1.title("To-Do-List")
+            win1.geometry("340x220+430+200")
+            win1.resizable(False,False)
+
+            scroll = Scrollbar(win1)
+            scroll.place(x=323,y=0,height=218)
+
+            work = Listbox(win1,yscrollcommand=scroll.set,bg="#DAA520")
+            work.place(x=0,y=0,height=220,width=320)
+
+            scroll.config(command=work.yview)
+
+            de = Button(work,text="Delete",bg="#F5DEB3")
+            de.place(x=140,y=190)
+
+            #--Add item in list & file--
+            file = 'To-Do-List.txt'
+            file1 = open(file,'a')
+            file1.write(li+ "\n")
+            file1.close()
+
+            f = open(file,"r")
+            for i in f:
+                work.insert(END,i)
+
+            win1.mainloop()
 
 
         else:

@@ -19,11 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1c6abb5-1eb6-4822-aebd-98011e6551dc" name="Default Changelist" comment="timer">
-      <change afterPath="$PROJECT_DIR$/audio-1832958.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio-3209849.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio-5021888.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio-9440328.mp3" afterDir="false" />
+    <list default="true" id="f1c6abb5-1eb6-4822-aebd-98011e6551dc" name="Default Changelist" comment="module">
+      <change afterPath="$PROJECT_DIR$/To-Do-List.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoiceBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/VoiceBot.py" afterDir="false" />
     </list>
@@ -160,8 +157,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.VoiceBot" />
-        <item itemvalue="Python.Library" />
         <item itemvalue="Python.j" />
+        <item itemvalue="Python.Library" />
         <item itemvalue="Python.Stop_Watch" />
         <item itemvalue="Python.ChatBot" />
       </list>
@@ -337,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617567786655</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="module">
+      <created>1617603454787</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1617603454787</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -359,7 +363,8 @@
     <MESSAGE value="weather" />
     <MESSAGE value="commit" />
     <MESSAGE value="timer" />
-    <option name="LAST_COMMIT_MESSAGE" value="timer" />
+    <MESSAGE value="module" />
+    <option name="LAST_COMMIT_MESSAGE" value="module" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617372676535">
@@ -374,33 +379,49 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617602319254" />
-    <state width="1345" height="182" key="GridCell.Tab.0.bottom" timestamp="1617602918679">
+    <state width="1345" height="182" key="GridCell.Tab.0.bottom" timestamp="1617607852983">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617602918679" />
-    <state width="1345" height="182" key="GridCell.Tab.0.center" timestamp="1617602918677">
+    <state width="1345" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617607852983" />
+    <state width="1345" height="182" key="GridCell.Tab.0.center" timestamp="1617607852983">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617602918677" />
-    <state width="1345" height="182" key="GridCell.Tab.0.left" timestamp="1617602918677">
+    <state width="1345" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617607852983" />
+    <state width="1345" height="182" key="GridCell.Tab.0.left" timestamp="1617607852983">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617602918677" />
-    <state width="1345" height="182" key="GridCell.Tab.0.right" timestamp="1617602918679">
+    <state width="1345" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617607852983" />
+    <state width="1345" height="182" key="GridCell.Tab.0.right" timestamp="1617607852983">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617602918679" />
+    <state width="1345" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617607852983" />
     <state x="293" y="20" width="998" height="708" key="SettingsEditor" timestamp="1617603355107">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="293" y="20" width="998" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617603355107" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1617567801761">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1617603459909">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1617567801761" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1617603459909" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617432720788">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1617432720788" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/VoiceBot.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/VoiceBot.py</url>
+          <line>72</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
