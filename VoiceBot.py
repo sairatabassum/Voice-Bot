@@ -256,6 +256,7 @@ def chat_enter():
             buto.place(x=130,y=130)
 
             win1.mainloop()
+
         elif 'add item' in voice_or_text_data:
 
             li=record_audio("What do you want to add in list?")
@@ -267,6 +268,28 @@ def chat_enter():
             win1.geometry("340x220+430+200")
             win1.resizable(False,False)
 
+            def delete():
+                selected_item = work.get(ACTIVE)
+                work.delete(ACTIVE)
+
+                if os.path.exists("To-Do-List.txt"):
+                    os.remove("To-Do-List.txt")
+
+                fil = 'To-Do-List.txt'
+                fi = open(fil,'a')
+                cnt = 0
+
+                for i in list1:
+                    if i == selected_item and cnt == 0:
+                        cnt = 1
+                    else:
+                        fi.write(i)
+
+                fi.close()
+
+            selected_item = ""
+            list1 = []
+
             scroll = Scrollbar(win1)
             scroll.place(x=323,y=0,height=218)
 
@@ -275,7 +298,7 @@ def chat_enter():
 
             scroll.config(command=work.yview)
 
-            de = Button(work,text="Delete",bg="#F5DEB3")
+            de = Button(work,text="Delete",bg="#F5DEB3",command=delete)
             de.place(x=140,y=190)
 
             #--Add item in list & file--
@@ -287,6 +310,9 @@ def chat_enter():
             f = open(file,"r")
             for i in f:
                 work.insert(END,i)
+                list1.append(i)
+
+            f.close()
 
             win1.mainloop()
 
