@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1c6abb5-1eb6-4822-aebd-98011e6551dc" name="Default Changelist" comment="venv">
+    <list default="true" id="f1c6abb5-1eb6-4822-aebd-98011e6551dc" name="Default Changelist" comment="commit">
+      <change afterPath="$PROJECT_DIR$/audio-2459740.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio-6941459.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoiceBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/VoiceBot.py" afterDir="false" />
     </list>
@@ -361,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617638223773</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="commit">
+      <created>1617689094910</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1617689094910</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -381,12 +390,12 @@
     <MESSAGE value="text send" />
     <MESSAGE value="record" />
     <MESSAGE value="weather" />
-    <MESSAGE value="commit" />
     <MESSAGE value="timer" />
     <MESSAGE value="module" />
     <MESSAGE value="TO-DO-LIST" />
     <MESSAGE value="venv" />
-    <option name="LAST_COMMIT_MESSAGE" value="venv" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617372676535">
@@ -397,34 +406,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="416" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1617432409261" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1617635754595">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1617692741505">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617635754595" />
-    <state width="1345" height="182" key="GridCell.Tab.0.bottom" timestamp="1617650519908">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617692741505" />
+    <state width="1345" height="182" key="GridCell.Tab.0.bottom" timestamp="1617692755235">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617650519908" />
-    <state width="1345" height="182" key="GridCell.Tab.0.center" timestamp="1617650519907">
+    <state width="1345" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617692755235" />
+    <state width="1345" height="182" key="GridCell.Tab.0.center" timestamp="1617692755235">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617650519907" />
-    <state width="1345" height="182" key="GridCell.Tab.0.left" timestamp="1617650519842">
+    <state width="1345" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617692755235" />
+    <state width="1345" height="182" key="GridCell.Tab.0.left" timestamp="1617692755234">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617650519842" />
-    <state width="1345" height="182" key="GridCell.Tab.0.right" timestamp="1617650519907">
+    <state width="1345" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617692755234" />
+    <state width="1345" height="182" key="GridCell.Tab.0.right" timestamp="1617692755235">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617650519907" />
+    <state width="1345" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617692755235" />
     <state x="160" y="20" width="998" height="708" key="SettingsEditor" timestamp="1617641408943">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="160" y="20" width="998" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617641408943" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1617638251033">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1617689145262">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1617638251033" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1617689145262" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617432720788">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -435,7 +444,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/VoiceBot.py</url>
-          <line>82</line>
+          <line>84</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

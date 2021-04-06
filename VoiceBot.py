@@ -30,7 +30,6 @@ pip install pillow
 pip install SpeechRecognition
 pip install pipwin
 pipwin install pyaudio
-pip install pillow
 pip install gTTS
 pip install requests
 pip install bs4
@@ -85,11 +84,18 @@ def chat_enter():
 
     def pikachu_speak(audio_string):
 
+        #---gTTS (Google Text-to-Speech)---
+        #---Convert the string into voice---
         adio=gTTS(text=audio_string,lang='en')
+        #---Returns a random integer number & randint() method---
         ran=random.randint(1,10000000)
+        #---Audio file name---
         audio_file='audio-'+str(ran)+'.mp3'
+        #---The voice save in the audio_file---
         adio.save(audio_file)
+        #---Play the audio file--
         playsound.playsound(audio_file)
+        #---Remove the audio file---
         os.remove(audio_file)
 
 
