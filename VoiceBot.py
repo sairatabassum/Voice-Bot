@@ -15,7 +15,7 @@ from tkinter import messagebox
 
 
 
-#--Main Windows--
+#---Main Windows
 win=Tk()
 win.geometry('400x590+400+15')
 win.title("Pikachu VoiceBot")
@@ -43,31 +43,31 @@ This program requires internet connection.
 '''
 
 
-#--Enter Voice-Bot--
+#--Enter Voice-Bot
 def chat_enter():
 
-    #---To recognize input from the microphone,use a recognizer class. ---
+    #---To recognize input from the microphone,use a recognizer class
     r = sp.Recognizer()
 
-
+    #---Speech to Text
     def record_audio(ask=False):
 
-        #---Set microphone to accept sound & PyAudo is required---
+        #---Set microphone to accept sound & PyAudo is required
         with sp.Microphone() as source:
 
             if ask:
 
                 pikachu_speak(ask)
 
-            #---Reduce noise---
+            #---Reduce noise
             r.adjust_for_ambient_noise(source)
 
-            #---record the source and save it into audio---
+            #---record the source and save it into audio
             audio = r.record(source,duration=4)
             text = ''
 
             try:
-                #---Audio into text . String type---
+                #---Audio into text
                 text = r.recognize_google(audio)
 
             except sp.UnknownValueError:
@@ -78,24 +78,24 @@ def chat_enter():
             except sp.RequestError:
 
                 pikachu_speak("Sorry, my speech service is down")
-
+        #---Return The text file
         return text
 
-
+    #---Text to Speech
     def pikachu_speak(audio_string):
 
-        #---gTTS (Google Text-to-Speech)---
-        #---Convert the string into voice---
+        #---gTTS (Google Text-to-Speech)
+        #---Convert the string into voice
         adio=gTTS(text=audio_string,lang='en')
-        #---Returns a random integer number & randint() method---
+        #---Returns a random integer number & randint() method
         ran=random.randint(1,10000000)
-        #---Audio file name---
+        #---Audio file name
         audio_file='audio-'+str(ran)+'.mp3'
-        #---The voice save in the audio_file---
+        #---The voice save in the audio_file
         adio.save(audio_file)
-        #---Play the audio file--
+        #---Play the audio file
         playsound.playsound(audio_file)
-        #---Remove the audio file---
+        #---Remove the audio file
         os.remove(audio_file)
 
 
@@ -320,7 +320,7 @@ def chat_enter():
             de = Button(work,text="Delete",bg="#F5DEB3",command=delete)
             de.place(x=140,y=190)
 
-            #--Add item in list & file--
+            #--Add item in list & file
             file = 'To-Do-List.txt'
             file1 = open(file,'a')
             file1.write(li+ "\n")
@@ -347,7 +347,9 @@ def chat_enter():
 
     def ri():
 
+        #---Take input from microphone
         voice_data = record_audio()
+        #---Respond to the voice
         respond(voice_data)
 
 
@@ -427,32 +429,32 @@ def chat_enter():
     l1.place(x=50,y=340,height=130,width=300)
 
 
-# --Color Palette--
+#---Color Palette
 def color():
     global cl
     cl = colorchooser.askcolor()
 
 
-# --Change into Light Mode--
+#---Change into Light Mode
 def light():
 
     fr1=Frame(win,bg="#ececec")
     fr1.place(x=0,y=0,width=400,height=590)
 
-    # --Image Add--
+    #---Image Add
     image = ImageTk.PhotoImage(Image.open("chatbot-1.png"))
     p = Label(fr1,image=image)
     p.image=image
     p.place(x=-215,y=0)
 
-    # --Welcome to pikachu chatbot--
+    #---Welcome to pikachu chatbot
     la1 = Label(fr1,text="Welcome to Pikachu",font=('veranda',25,''),bg="#ececec")
     la1.place(x=50,y=310)
 
     la2 = Label(fr1,text="VoiceBot",font=('veranda',25,''),bg="#ececec")
     la2.place(x=130,y=360)
 
-    # --Theme & Chat background--
+    #---Theme & Chat background
     la3 = Label(fr1,text="Theme",font=('calibri',11,''),bg="#ececec")
     la3.place(x=50,y=450)
 
@@ -470,30 +472,30 @@ def light():
     but1 = Button(fr1,text="Pick Color",width=20,font=('calibri',10,''),bg="#878f84",fg="white",command=color)
     but1.place(x=190,y=490)
 
-    # --Enter to the chat--
+    #---Enter to the chat
     but2 = Button(fr1,text="Enter",width=10,font=('calibri',11,''),bg="#2E8B57",fg="white",command=chat_enter)
     but2.place(x=160,y=540)
 
 
-# --Change into Dark Mode--
+#---Change into Dark Mode
 def dark():
     fr1 = Frame(win,bg="#262626")
     fr1.place(x=0,y=0,width=400,height=590)
 
-    # --Image Add--
+    #---Image Add
     image = ImageTk.PhotoImage(Image.open("chatbot-2.jpg"))
     p = Label(fr1,image=image)
     p.image = image
     p.place(x=-215,y=0)
 
-    # --Welcome to pikachu chatbot--
+    #---Welcome to pikachu chatbot
     la1 = Label(fr1,text="Welcome to Pikachu",font=('veranda',25,''),bg="#262626",fg="#F5F5F5")
     la1.place(x=50,y=310)
 
     la2 = Label(fr1,text="VoiceBot",font=('veranda',25,''),bg="#262626",fg="#F5F5F5")
     la2.place(x=130,y=360)
 
-    # --Theme & Chat background--
+    #---Theme & Chat background
     la3 = Label(fr1,text="Theme",font=('calibri',11,''),bg="#262626",fg="#F5F5F5")
     la3.place(x=50,y=450)
 
@@ -510,7 +512,7 @@ def dark():
     but1 = Button(fr1,text="Pick Color",width=20,font=('calibri',10,''),bg="#878f84",fg="white",command=color)
     but1.place(x=190,y=490)
 
-    # --Enter to the chat--
+    #---Enter to the chat
     but2 = Button(fr1,text="Enter",width=10,font=('calibri',11,''),bg="#2E8B57",fg="white",command=chat_enter)
     but2.place(x=160,y=540)
 

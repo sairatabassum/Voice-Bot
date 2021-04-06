@@ -370,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617689094910</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="commit">
+      <created>1617693557530</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1617693557530</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -410,30 +417,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617692741505" />
-    <state width="1345" height="182" key="GridCell.Tab.0.bottom" timestamp="1617692755235">
+    <state width="1345" height="182" key="GridCell.Tab.0.bottom" timestamp="1617695165874">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617692755235" />
-    <state width="1345" height="182" key="GridCell.Tab.0.center" timestamp="1617692755235">
+    <state width="1345" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617695165874" />
+    <state width="1345" height="182" key="GridCell.Tab.0.center" timestamp="1617695165873">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617692755235" />
-    <state width="1345" height="182" key="GridCell.Tab.0.left" timestamp="1617692755234">
+    <state width="1345" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617695165873" />
+    <state width="1345" height="182" key="GridCell.Tab.0.left" timestamp="1617695165873">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617692755234" />
-    <state width="1345" height="182" key="GridCell.Tab.0.right" timestamp="1617692755235">
+    <state width="1345" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617695165873" />
+    <state width="1345" height="182" key="GridCell.Tab.0.right" timestamp="1617695165873">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617692755235" />
+    <state width="1345" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617695165873" />
     <state x="160" y="20" width="998" height="708" key="SettingsEditor" timestamp="1617641408943">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="160" y="20" width="998" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617641408943" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1617689145262">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1617693565511">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1617689145262" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1617693565511" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617432720788">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -444,8 +451,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/VoiceBot.py</url>
-          <line>84</line>
-          <option name="timeStamp" value="3" />
+          <line>101</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
