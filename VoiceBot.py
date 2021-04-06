@@ -59,8 +59,6 @@ def chat_enter():
 
                 pikachu_speak(ask)
 
-            #---Reduce noise
-            r.adjust_for_ambient_noise(source)
 
             #---record the source and save it into audio
             audio = r.record(source,duration=4)
@@ -101,7 +99,7 @@ def chat_enter():
 
     def respond(voice_or_text_data):
 
-
+        print(voice_or_text_data)
         if 'what is your name' in voice_or_text_data :
 
             l1.config(text="My name is pikachu.\nI am a bot.I work for you")
@@ -123,6 +121,7 @@ def chat_enter():
 
             search = record_audio("what do you want to search for?")
             url = 'https://google.com/search?q=' + search
+            #---The webbrowser module open() method will open default web browser with a given url
             webbrowser.get().open(url)
             pikachu_speak("here is search" + search)
             l1.config(text="Here is search:\n" + search)
@@ -139,7 +138,6 @@ def chat_enter():
         elif 'Wikipedia' in voice_or_text_data:
 
             wiki=record_audio("what do you want to search in wikipedia?")
-
             url = 'https://en.wikipedia.org/wiki/=' + wiki
             webbrowser.get().open(url)
             l1.config(text="Here is wikipedia:\n" + wiki)
@@ -161,7 +159,8 @@ def chat_enter():
                 l1.config(text="Incorrect location name.\nPlease check the location.")
             else:
 
-                # Store data
+                #---Store data
+                #---Kelvin to celsius
                 city = ((api_data['main']['temp']) - 273.15)
                 weather = api_data['weather'][0]['description']
                 humadity = api_data['main']['humidity']
@@ -340,9 +339,6 @@ def chat_enter():
 
             pikachu_speak("I am a pikachu chatbot")
             l1.config(text="I am a pikachu chatbot.")
-
-        print(voice_or_text_data)
-
 
 
     def ri():
