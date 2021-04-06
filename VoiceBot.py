@@ -38,24 +38,37 @@ pip install playsound
 
 '''
 
+
+'''
+This program requires internet connection.
+'''
+
+
 #--Enter Voice-Bot--
 def chat_enter():
 
-
+    #---To recognize input from the microphone,use a recognizer class. ---
     r = sp.Recognizer()
+
 
     def record_audio(ask=False):
 
+        #---Set microphone to accept sound & PyAudo is required---
         with sp.Microphone() as source:
 
             if ask:
 
                 pikachu_speak(ask)
+
+            #---Reduce noise---
+            r.adjust_for_ambient_noise(source)
+
+            #---record the source and save it into audio---
             audio = r.record(source,duration=4)
             text = ''
 
             try:
-
+                #---Audio into text . String type---
                 text = r.recognize_google(audio)
 
             except sp.UnknownValueError:
