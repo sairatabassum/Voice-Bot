@@ -384,7 +384,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617695322729</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="commit">
+      <created>1617698739591</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1617698739591</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -424,30 +431,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617692741505" />
-    <state width="1345" height="182" key="GridCell.Tab.0.bottom" timestamp="1617698118525">
+    <state width="1345" height="182" key="GridCell.Tab.0.bottom" timestamp="1617705468291">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617698118525" />
-    <state width="1345" height="182" key="GridCell.Tab.0.center" timestamp="1617698118525">
+    <state width="1345" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617705468291" />
+    <state width="1345" height="182" key="GridCell.Tab.0.center" timestamp="1617705468290">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617698118525" />
-    <state width="1345" height="182" key="GridCell.Tab.0.left" timestamp="1617698118525">
+    <state width="1345" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617705468290" />
+    <state width="1345" height="182" key="GridCell.Tab.0.left" timestamp="1617705468290">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617698118525" />
-    <state width="1345" height="182" key="GridCell.Tab.0.right" timestamp="1617698118525">
+    <state width="1345" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617705468290" />
+    <state width="1345" height="182" key="GridCell.Tab.0.right" timestamp="1617705468291">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617698118525" />
+    <state width="1345" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617705468291" />
     <state x="160" y="20" width="998" height="708" key="SettingsEditor" timestamp="1617641408943">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="160" y="20" width="998" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617641408943" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1617695327656">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1617698744772">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1617695327656" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1617698744772" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617432720788">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -458,8 +465,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/VoiceBot.py</url>
-          <line>101</line>
+          <line>99</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/VoiceBot.py</url>
+          <line>179</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -149,8 +149,10 @@ def chat_enter():
 
             location=record_audio("Say the name of the city:")
             link = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=c4c80c6387c03dde649323ba4e878114"
+            #--- get() method sends a GET request to the specified url.
             api_link = requests.get(link)
             api_data = api_link.json()
+
 
 
             if api_data['cod']=='404':
@@ -201,7 +203,7 @@ def chat_enter():
             pikachu_speak("Here is Time counter. Set a time")
             l1.config(text="Here is Time counter. Set a time")
 
-            #---Time Counter---
+            #---Time Counter
             win1 = Toplevel(win)
             win1.title("Time Counter")
             win1.geometry("340x220+430+200")
@@ -210,13 +212,13 @@ def chat_enter():
 
             def tim():
                 try:
-                    total_sec = int(hour.get()) * 3600 + int(minute.get()) * 60 + int(second.get())
+                    total_sec = int(hour.get())*3600+int(minute.get())*60+int(second.get())
                 except:
                     messagebox.showerror("Error","Input the correct value")
 
                 while total_sec >= 0:
                     hours = 0
-                    # ins=total_sec/60; secs=total_sec%60
+                    # mins=total_sec/60; secs=total_sec%60
                     mins,secs = divmod(total_sec,60)
 
                     if mins > 60:
