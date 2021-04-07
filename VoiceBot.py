@@ -52,7 +52,7 @@ def chat_enter():
     #---Speech to Text
     def record_audio(ask=False):
 
-        #---Set microphone to accept sound & PyAudo is required
+        #---Set microphone to accept sound & PyAudio is required
         with sp.Microphone() as source:
 
             if ask:
