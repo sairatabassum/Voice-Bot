@@ -45,6 +45,7 @@ This program requires internet connection.
 
 #---Question---
 tar1=['who made you', 'who created you']
+tar2=['I was created by Pikachu.', 'Pikachu']
 question=['what is your name', 'who are you']
 greetings = ['hey there', 'hello', 'hi', 'hai', 'hey']
 how=['How are you?', 'How are you doing?']
@@ -117,7 +118,13 @@ def chat_enter():
     def respond(voice_or_text_data):
 
         print(voice_or_text_data)
-        if  voice_or_text_data in question :
+        if voice_or_text_data in tar1:
+
+            r_answer=random.choice(tar2)
+            l1.config(text=r_answer)
+            pikachu_speak(r_answer)
+
+        elif  voice_or_text_data in question :
 
             l1.config(text="My name is pikachu.\nI am a bot.I work for you")
             pikachu_speak("My name is pikachu. I am a bot. I work for you")
