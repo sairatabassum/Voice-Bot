@@ -46,6 +46,9 @@ question=['what is your name', 'who are you']
 greetings = ['hey there', 'hello', 'hi', 'hai', 'hey']
 how=['How are you?', 'How are you doing?']
 tme=['what time is it now','time','tell me about time','current time']
+srch=['search','search in google']
+loc=['find location','location','open google map']
+
 weather = ['tell me the weather', 'weather', 'what about the weather','the weather']
 
 
@@ -122,7 +125,7 @@ def chat_enter():
             pikachu_speak("I am fine.Nice to talk with you")
             l1.config(text="I am fine.\nNice to talk with you")
 
-        elif 'what time is it now' in voice_or_text_data:
+        elif voice_or_text_data in tme:
 
             pikachu_speak("Current Local Time:")
             pikachu_speak(ctime())
