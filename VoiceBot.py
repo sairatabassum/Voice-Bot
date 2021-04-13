@@ -48,7 +48,7 @@ how=['How are you?', 'How are you doing?']
 tme=['what time is it now','time','tell me about time','current time']
 srch=['search','search in google']
 loc=['find location','location','open google map']
-
+wikip=['wikipedia','open wikipidea','search on wikipedia']
 weather = ['tell me the weather', 'weather', 'what about the weather','the weather']
 
 
