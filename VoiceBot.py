@@ -15,6 +15,7 @@ from tkinter import messagebox
 
 
 
+
 #---Main Windows
 win=Tk()
 win.geometry('400x590+400+15')
@@ -41,6 +42,9 @@ pip install playsound
 '''
 This program requires internet connection.
 '''
+greetings = ['hey there', 'hello', 'hi', 'hai', 'hey']
+weather = ['tell me the weather', 'weather', 'what about the weather']
+
 
 
 #--Enter Voice-Bot
@@ -100,7 +104,7 @@ def chat_enter():
     def respond(voice_or_text_data):
 
         print(voice_or_text_data)
-        if 'what is your name' in voice_or_text_data :
+        if  voice_or_text_data in greetings :
 
             l1.config(text="My name is pikachu.\nI am a bot.I work for you")
             pikachu_speak("My name is pikachu. I am a bot. I work for you")
