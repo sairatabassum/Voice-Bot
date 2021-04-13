@@ -45,7 +45,7 @@ This program requires internet connection.
 question=['what is your name', 'who are you']
 greetings = ['hey there', 'hello', 'hi', 'hai', 'hey']
 how=['How are you?', 'How are you doing?']
-tme=['what time is it now','time','tell me about time','current time']
+tme=['what time is it now','time','tell me about time','current time','what is the time']
 srch=['search','search in google']
 loc=['find location','location','open google map']
 wikip=['wikipedia','open wikipidea','search on wikipedia']
