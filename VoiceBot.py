@@ -44,6 +44,7 @@ This program requires internet connection.
 '''
 question=['what is your name', 'who are you']
 greetings = ['hey there', 'hello', 'hi', 'hai', 'hey']
+how=['How are you?', 'How are you doing?']
 weather = ['tell me the weather', 'weather', 'what about the weather','the weather']
 
 
@@ -115,7 +116,7 @@ def chat_enter():
             pikachu_speak(r_choice)
             l1.config(text=r_choice)
 
-        elif 'how are you' in voice_or_text_data:
+        elif voice_or_text_data in how:
 
             pikachu_speak("I am fine.Nice to talk with you")
             l1.config(text="I am fine.\nNice to talk with you")
