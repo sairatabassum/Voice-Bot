@@ -51,6 +51,7 @@ loc=['find location','location','open google map']
 wikip=['wikipedia','open wikipidea','search on wikipedia']
 weather = ['tell me the weather', 'weather', 'what about the weather','the weather']
 cov=['covid-19','covid','covid statistics','covid status']
+tymr=['set time','set a time','timer','open timer']
 
 
 
