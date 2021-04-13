@@ -42,6 +42,9 @@ pip install playsound
 '''
 This program requires internet connection.
 '''
+
+#---Question---
+tar1=['who made you', 'who created you']
 question=['what is your name', 'who are you']
 greetings = ['hey there', 'hello', 'hi', 'hai', 'hey']
 how=['How are you?', 'How are you doing?']
