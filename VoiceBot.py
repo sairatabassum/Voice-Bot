@@ -45,6 +45,7 @@ This program requires internet connection.
 question=['what is your name', 'who are you']
 greetings = ['hey there', 'hello', 'hi', 'hai', 'hey']
 how=['How are you?', 'How are you doing?']
+tme=['what time is it now','time','tell me about time','current time']
 weather = ['tell me the weather', 'weather', 'what about the weather','the weather']
 
 
