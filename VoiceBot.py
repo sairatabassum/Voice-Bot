@@ -366,7 +366,10 @@ def chat_enter():
             f.close()
 
             win1.mainloop()
+        elif voice_or_text_data in ex:
 
+            pikachu_speak("Good Bye")
+            win.destroy()
 
         else:
 
