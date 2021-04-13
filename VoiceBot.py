@@ -42,8 +42,9 @@ pip install playsound
 '''
 This program requires internet connection.
 '''
+question=['what is your name', 'who are you']
 greetings = ['hey there', 'hello', 'hi', 'hai', 'hey']
-weather = ['tell me the weather', 'weather', 'what about the weather']
+weather = ['tell me the weather', 'weather', 'what about the weather','the weather']
 
 
 
@@ -104,10 +105,15 @@ def chat_enter():
     def respond(voice_or_text_data):
 
         print(voice_or_text_data)
-        if  voice_or_text_data in greetings :
+        if  voice_or_text_data in question :
 
             l1.config(text="My name is pikachu.\nI am a bot.I work for you")
             pikachu_speak("My name is pikachu. I am a bot. I work for you")
+
+        elif voice_or_text_data in greetings:
+            r_choice=random.choice(greetings)
+            pikachu_speak(r_choice)
+            l1.config(text=r_choice)
 
         elif 'how are you' in voice_or_text_data:
 
