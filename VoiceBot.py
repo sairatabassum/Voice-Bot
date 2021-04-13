@@ -57,6 +57,7 @@ wther = ['tell me the weather', 'weather', 'what about the weather','the weather
 cov=['covid-19','covid','covid statistics','covid status']
 tymr=['set time','set a time','timer','open timer']
 to_do=['add item','add an item','add list']
+ex = ['exit', 'close', 'close the program']
 
 
 
@@ -118,6 +119,7 @@ def chat_enter():
     def respond(voice_or_text_data):
 
         print(voice_or_text_data)
+
         if voice_or_text_data in tar1:
 
             r_answer=random.choice(tar2)
