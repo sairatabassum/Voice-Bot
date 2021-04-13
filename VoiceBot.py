@@ -45,7 +45,7 @@ This program requires internet connection.
 
 #---Question---
 tar1=['who made you', 'who created you']
-tar2=['I was created by Pikachu.', 'Pikachu']
+tar2=['I was created by Pikachu.', 'Pikachu a cartoon']
 question=['what is your name', 'who are you']
 greetings = ['hey there', 'hello', 'hi', 'hai', 'hey']
 how=['How are you?', 'How are you doing?']
@@ -80,7 +80,7 @@ def chat_enter():
 
 
             #---record the source and save it into audio
-            audio = r.record(source,duration=4)
+            audio = r.record(source,duration=3)
             text = ''
 
             try:
@@ -366,6 +366,7 @@ def chat_enter():
             f.close()
 
             win1.mainloop()
+
         elif voice_or_text_data in ex:
 
             pikachu_speak("Good Bye")
