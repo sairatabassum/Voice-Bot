@@ -49,10 +49,11 @@ tme=['what time is it now','time','tell me about time','current time']
 srch=['search','search in google']
 loc=['find location','location','open google map']
 wikip=['wikipedia','open wikipidea','search on wikipedia']
-weather = ['tell me the weather', 'weather', 'what about the weather','the weather']
+wther = ['tell me the weather', 'weather', 'what about the weather','the weather']
 cov=['covid-19','covid','covid statistics','covid status']
 tymr=['set time','set a time','timer','open timer']
 to_do=['add item','add an item','add list']
+
 
 
 
@@ -135,7 +136,7 @@ def chat_enter():
             l1.config(text="Current Local Time:\n" + ctime())
 
 
-        elif "search" in voice_or_text_data:
+        elif voice_or_text_data in srch:
 
             search = record_audio("what do you want to search for?")
             url = 'https://google.com/search?q=' + search
@@ -145,7 +146,7 @@ def chat_enter():
             l1.config(text="Here is search:\n" + search)
 
 
-        elif 'find location' in voice_or_text_data:
+        elif voice_or_text_data in loc:
 
             location = record_audio("Say the name of the location?")
             url = 'https://google.nl/maps/place/' + location + '/&amp;'
@@ -153,7 +154,7 @@ def chat_enter():
             pikachu_speak("The location map: "+location)
             l1.config(text="The location map:\n"+location)
 
-        elif 'Wikipedia' in voice_or_text_data:
+        elif voice_or_text_data in wikip:
 
             wiki=record_audio("what do you want to search in wikipedia?")
             url = 'https://en.wikipedia.org/wiki/=' + wiki
@@ -163,7 +164,7 @@ def chat_enter():
 
 
 
-        elif 'weather' in voice_or_text_data:
+        elif  voice_or_text_data in wther:
 
             location=record_audio("Say the name of the city:")
             link = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=c4c80c6387c03dde649323ba4e878114"
@@ -195,7 +196,7 @@ def chat_enter():
                 pikachu_speak("Humidity: " +str( humadity)+" percentage")
                 pikachu_speak("Wind speed: " + str(wind_speed) + 'kilometre per hour')
 
-        elif 'covid-19' in voice_or_text_data:
+        elif voice_or_text_data in cov:
 
             country=record_audio("Which country?")
             url = "https://worldometers.info/coronavirus/country/"+country+"/"
@@ -217,7 +218,7 @@ def chat_enter():
                 pikachu_speak("Country name is not found.")
                 l1.config(text="Country name is not found.")
 
-        elif 'set a time' in voice_or_text_data:
+        elif  voice_or_text_data in tymr:
             pikachu_speak("Here is Time counter. Set a time")
             l1.config(text="Here is Time counter. Set a time")
 
@@ -295,7 +296,7 @@ def chat_enter():
 
             win1.mainloop()
 
-        elif 'add item' in voice_or_text_data:
+        elif voice_or_text_data in to_do:
 
             li=record_audio("What do you want to add in list?")
             pikachu_speak("Added. Here is List")
