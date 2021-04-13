@@ -43,6 +43,7 @@ pip install playsound
 This program requires internet connection.
 '''
 
+
 #---Question---
 tar1=['who made you', 'who created you']
 tar2=['I was created by Pikachu.', 'Pikachu a cartoon']
@@ -132,6 +133,7 @@ def chat_enter():
             pikachu_speak("My name is pikachu. I am a bot. I work for you")
 
         elif voice_or_text_data in greetings:
+
             r_choice=random.choice(greetings)
             pikachu_speak(r_choice)
             l1.config(text=r_choice)
@@ -227,10 +229,12 @@ def chat_enter():
                 l1.config(text="Country name: "+country+"\n"+all_info)
 
             except:
+
                 pikachu_speak("Country name is not found.")
                 l1.config(text="Country name is not found.")
 
         elif  voice_or_text_data in tymr:
+
             pikachu_speak("Here is Time counter. Set a time")
             l1.config(text="Here is Time counter. Set a time")
 
