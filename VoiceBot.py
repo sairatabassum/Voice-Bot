@@ -15,8 +15,7 @@ from tkinter import messagebox
 
 
 
-
-#---Main Windows
+#---Main Windows---
 win=Tk()
 win.geometry('400x590+400+15')
 win.title("Pikachu VoiceBot")
@@ -516,6 +515,7 @@ def light():
 
 #---Change into Dark Mode
 def dark():
+    
     fr1 = Frame(win,bg="#262626")
     fr1.place(x=0,y=0,width=400,height=590)
 
