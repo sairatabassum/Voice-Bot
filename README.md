@@ -3,6 +3,8 @@
 
 A simple Python based Voice Bot. Voice bot can speak and interact with user through the voice. If you ask a random question, the bot will answer to your question. :robot:	
 
+
+
 # Some list that Voice Bot will answer
 
 - [x] Current time & date
@@ -13,6 +15,8 @@ A simple Python based Voice Bot. Voice bot can speak and interact with user thro
 - [x] Covid-19 statistics of any country
 - [x] Add to-do-list
 - [x] Set Time
+
+
 
 
 # Screenshot
