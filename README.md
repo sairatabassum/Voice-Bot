@@ -3,7 +3,7 @@
 
 A simple Python based Voice Bot. Voice bot can speak and interact with user through the voice. If you ask a random question, the bot will answer to your question. :robot:	
 
-### Some list that Voice Bot will answer
+# Some list that Voice Bot will answer
 
 - [x] Current time & date
 - [x]  Google Search
