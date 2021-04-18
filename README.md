@@ -17,6 +17,21 @@ A simple Python based Voice Bot. Voice bot can speak and interact with user thro
 - [x] Set Time
 
 
+# How to run
+
+**Before running this program,download or install:**
+
+- pip install pillow
+- pip install SpeechRecognition
+- pip install pipwin
+- pipwin install pyaudio
+- pip install gTTS
+- pip install requests
+- pip install bs4
+- pip install playsound
+
+`This program requires internet connection.`
+
 
 
 # Screenshot
