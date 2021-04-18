@@ -1,6 +1,5 @@
 # Voice-Bot
 
-**Voice Bot**
 
 A simple Python based Voice Bot. Voice bot can speak and interact with user through the voice. If you ask a random question, the bot will answer to your question. :robot:	
 
